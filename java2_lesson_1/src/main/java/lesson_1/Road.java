@@ -19,8 +19,4 @@ public class Road implements Obstacles {
     public int getRoadLength() {
         return this.roadLength;
     }
-
-    //    public Road(int wallHeight, int roadLength) {
-//        super(wallHeight, roadLength);
-//    }
 }
