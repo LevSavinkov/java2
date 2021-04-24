@@ -1,23 +1,24 @@
 package lesson_1;
 
-public class Cat implements Running, Jumping {
-    @Override
-    public void Run() {
-        System.out.println("Кот бежит!");
+public class Cat  implements Participants{
+    private final int jumpLimit;
+    private final int runLimit;
+    private final String name;
+
+    public Cat (int jumpLimit, int runLimit, String name) {
+        this.jumpLimit = jumpLimit;
+        this.runLimit = runLimit;
+        this.name = name;
     }
 
-    @Override
-    public void notRun() {
-
+    public String getName() {
+        return name;
     }
 
-    @Override
-    public void jump() {
-        System.out.println("Кот прыгает!");
+    public boolean jump(int height) {
+        return jumpLimit > height;
     }
-
-    @Override
-    public void notJump() {
-
+    public boolean run(int length) {
+        return runLimit > length;
     }
 }
