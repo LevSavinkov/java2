@@ -10,23 +10,23 @@ public class StartClass {
         };
 
         Obstacles[] obstacles = {
-                new Wall(20, 0),
-                new Road(0, 7),
-                new Wall(23, 0),
-                new Road(0, 16)
+                new Wall(0, 1),
+                new Road(1, 0),
+                new Wall(0,23),
+                new Road(16, 0)
         };
 
 
         for (Participants p : participants) {
             for (Obstacles o : obstacles) {
-                if (o.roadLength == 0) {
-                    if (p.jump(o.wallHeight) == true) {
+                if (o.getRoadLength() == 0) {
+                    if (p.jump(o.getWallHeight()) == true) {
                         System.out.println(p.getName() + " перепрыгнул!");
                     } else {
                         break;
                     }
                 } else {
-                    if (p.run(o.roadLength) == true){
+                    if (p.run(o.getRoadLength()) == true){
                         System.out.println(p.getName() + " пробежал!");
                     } else {
                         break;

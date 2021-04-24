@@ -1,8 +1,25 @@
 package lesson_1;
 
-public class Wall extends Obstacles {
+public class Wall implements Obstacles {
 
-    public Wall(int wallHeight, int roadLength) {
-        super(wallHeight, roadLength);
+    int roadLength;
+    int wallHeight;
+
+    public Wall(int roadLength, int wallHeight) {
+        this.roadLength = roadLength;
+        this.wallHeight = wallHeight;
     }
+
+    @Override
+    public int getWallHeight() {
+        return this.wallHeight;
+    }
+
+    @Override
+    public int getRoadLength() {
+        return this.roadLength;
+    }
+    //    public Wall(int wallHeight, int roadLength) {
+//        super(wallHeight, roadLength);
+//    }
 }
