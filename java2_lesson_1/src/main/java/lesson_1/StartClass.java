@@ -13,16 +13,17 @@ public class StartClass {
                 new Wall(10)
         };
 
-//        for (Participants i : participants) {
-//            for (Obstacles j : obstacles){
-//                if (obstacles[j] instanceof Wall){
-//                    if (obstacles[j].wallHeight > participants[i].jumpLimit) {
-//}                       participants[i].notJump();
-//                    }
-//                }
-//            }
-//        }
+        for (Participants i : participants) {
+            for (Obstacles j : obstacles){
+                if (j instanceof Wall) {
+                    if (j.wallHeight > i.jumpLimit){
+                        i.notRun;
+                    }
+                }
+                }
+            }
+        }
     }
-}
+
 
 
